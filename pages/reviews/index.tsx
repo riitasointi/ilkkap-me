@@ -6,6 +6,8 @@ export default function Home() {
       <Head>
         <title>Ilkkap - Reviews</title>
       </Head>
+
+      <h1>Reviews</h1>
     </div>
   );
 }
