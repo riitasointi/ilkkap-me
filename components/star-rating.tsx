@@ -1,5 +1,10 @@
 /* eslint-disable react/no-array-index-key */
-export default function StarRating({ score }) {
+
+type Params = {
+  score: number;
+};
+
+export default function StarRating({ score }: Params) {
   return (
     <div className="flex">
       {[...Array(5)].map((star: number, index: number) => (

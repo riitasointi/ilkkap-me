@@ -2,7 +2,6 @@
 import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 
-import { Entry } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import ReviewHeader from '../../components/review-header';
@@ -25,7 +24,13 @@ export default function Review({ review }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+type Params = {
+  params: {
+    slug: string;
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
   const cs: ContentfulService = new ContentfulService();
   const review = await cs.getReviewBySlug(params.slug);
   return {

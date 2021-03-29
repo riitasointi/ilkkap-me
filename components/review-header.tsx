@@ -2,7 +2,11 @@ import moment from 'moment';
 import StarRating from './star-rating';
 import Blockquote from './blockquote';
 
-export default function ReviewHeader({ review }) {
+type Params = {
+  review: object;
+};
+
+export default function ReviewHeader({ review }: Params) {
   moment.locale('fi');
 
   return (
