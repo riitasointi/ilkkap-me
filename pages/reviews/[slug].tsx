@@ -27,7 +27,7 @@ export default function Review({ review }) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const cs: ContentfulService = new ContentfulService();
-  const review: Promise<Entry<any>> = await cs.getReviewBySlug(params.slug);
+  const review = await cs.getReviewBySlug(params.slug);
   return {
     props: { review },
   };
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const cs: ContentfulService = new ContentfulService();
-  const allReviews: Promise<Entry<any>[]> = await cs.getAllReviews();
+  const allReviews = await cs.getAllReviews();
   return {
     paths: allReviews?.map((entry) => `/reviews/${entry.fields.slug}`) ?? [],
     fallback: false,

@@ -9,7 +9,7 @@ export default class ContentfulService {
   private lang: string = 'fi';
 
   async getAllReviews(): Promise<Entry<any>[]> {
-    return this.client.getEntries({ 
+    return this.client.getEntries({
       content_type: 'review',
       locale: this.lang,
     })

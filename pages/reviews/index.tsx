@@ -11,7 +11,7 @@ import ContentfulService from '../../services/ContentfulService';
 
 export const getStaticProps: GetStaticProps = async () => {
   const cs: ContentfulService = new ContentfulService();
-  const allReviews: Promise<Entry<any>[]> = await cs.getAllReviews();
+  const allReviews = await cs.getAllReviews();
   return {
     props: { allReviews },
   };
