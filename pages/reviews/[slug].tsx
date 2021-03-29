@@ -1,40 +1,26 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
+
 import { Entry } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+import ReviewHeader from '../../components/review-header';
+
 import ContentfulService from '../../services/ContentfulService';
 
 export default function Review({ review }) {
-  console.log(review);
   return (
     <div className="container mx-auto my-6">
       <Head>
         <title>{`Ilkkap - ${review.fields.heading}`}</title>
       </Head>
 
-      <h1 className="my-5">{review.fields.heading}</h1>
+      <ReviewHeader review={review.fields} />
 
-      <div className="flex">
-        {[...Array(5)].map((star: any, index: number) => (
-          <div key={index}>
-            <span
-              className={
-                index + 1 <= review.fields.score ? 'text-yellow-500' : 'text-gray-400'
-              }
-            >
-              &#9733;
-            </span>
-          </div>
-        ))}
-      </div>
+      <div className="mb-10">{documentToReactComponents(review.fields.content)}</div>
 
-      <div className="my-5 flex justify-between">
-        <img className="w-36" src={review.fields.heroImage.fields.file.url} alt="album-cover"/>
-        <div>124</div>
-      </div>
-
-      <div>{documentToReactComponents(review.fields.content)}</div>
+      <iframe title="spotify-embed" src={review.fields.spotifyLink} width="400" height="400" allow="encrypted-media"></iframe>
     </div>
   );
 }

@@ -37,6 +37,8 @@
                 "tsx": "never"
             }
         ],
+        "react/prop-types": "off",
+        "react/self-closing-comp": "off",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [
             1,

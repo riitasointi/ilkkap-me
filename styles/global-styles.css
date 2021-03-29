@@ -27,3 +27,26 @@ body {
     @apply mb-3;
   }
 }
+
+.article-quote {
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 1rem 1rem 1rem 3rem;
+  border-left: 8px solid #717bc3;
+  line-height: 1.6;
+  position: relative;
+  background: #EDEDED;
+}
+
+.article-quote::before {
+  content: "\201C";
+  color:#717bc3;
+  font-size:3rem;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.article-quote::after {
+  content: '';
+}
