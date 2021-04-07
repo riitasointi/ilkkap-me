@@ -2,8 +2,10 @@ import moment from 'moment';
 import StarRating from './star-rating';
 import Blockquote from './blockquote';
 
+import Review from '../interfaces/Review';
+
 type Params = {
-  review: object;
+  review: Review;
 };
 
 export default function ReviewHeader({ review }: Params) {

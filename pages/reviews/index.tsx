@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 
-import ReviewHeader from '../../components/review-header';
+import ReviewLink from '../../components/review-link';
 
 import ContentfulService from '../../services/ContentfulService';
 
@@ -25,7 +25,7 @@ export default function Home({ allReviews }) {
 
       {allReviews.map((review) => (
         <div key="{review.sys.id}">
-          <ReviewHeader review={review.fields} />
+          <ReviewLink review={review.fields} />
         </div>
       ))}
     </div>
