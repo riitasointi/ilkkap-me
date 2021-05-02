@@ -1,7 +1,9 @@
-export default function ReviewHeader() {
+import NavLink from './nav-link';
+
+export default function Nav() {
   return (
     <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="container mx-auto">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
@@ -28,21 +30,10 @@ export default function ReviewHeader() {
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <a href="/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
-                  Dashboard
-                </a>
-
-                <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Team
-                </a>
-
-                <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Projects
-                </a>
-
-                <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Calendar
-                </a>
+                <NavLink href="/" text="Home"></NavLink>
+                <NavLink href="/bio" text="Bio"></NavLink>
+                <NavLink href="/reviews" text="Reviews & Articles"></NavLink>
+                <NavLink href="/contact" text="Contact"></NavLink>
               </div>
             </div>
           </div>
@@ -51,20 +42,20 @@ export default function ReviewHeader() {
 
       <div className="sm:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <a href="/" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
-            Dashboard
+          <a href="/" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+            Home
           </a>
 
-          <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Team
+          <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+            Bio
           </a>
 
-          <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Projects
+          <a href="/reviews" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+            Reviews & articles
           </a>
 
-          <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Calendar
+          <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+            Contact
           </a>
         </div>
       </div>
