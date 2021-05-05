@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,600;1,200&display=swap');
 
 /* purgecss start ignore */
 @tailwind base;
@@ -7,7 +8,8 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
+  font-family: 'Roboto Mono', monospace;
 }
 
 @layer base {
@@ -24,7 +26,7 @@ body {
     @apply text-blue-600 underline;
   }
   p {
-    @apply mb-3;
+    @apply mb-5;
   }
 }
 

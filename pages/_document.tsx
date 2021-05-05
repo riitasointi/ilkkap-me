@@ -5,7 +5,7 @@ import Document, {
 export default class CustomDocument extends Document {
   render() {
     return (
-      <Html lang="fi">
+      <Html lang="en">
         <Head />
         <body>
           <Main />

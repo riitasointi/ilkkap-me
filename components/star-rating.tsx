@@ -8,7 +8,7 @@ export default function StarRating({ score }: Params) {
     <div className="flex">
       {stars.map((star: number) => (
         <div key={star}>
-          <span className={star <= score ? 'text-xl text-yellow-500' : 'text-xl text-gray-400'}>&#9733;</span>
+          <span className={star <= score ? 'text-4xl text-yellow-500' : 'text-4xl text-gray-400'}>&#9733;</span>
         </div>
       ))}
     </div>
