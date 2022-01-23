@@ -21,6 +21,7 @@ export default function Home() {
             </h1>
             <p>I'm a Finnish full-stack software developer and a music afficionado.</p>
             <p>On this website you can find more information about me and reviews/articles I've written over the years.</p>
+            <p>Please note that this website is still <b>very much</b> a work in progress 😊</p>
           </div>
         </div>
       </div>
